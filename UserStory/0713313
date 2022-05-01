@@ -1,0 +1,31 @@
+0713313
+Uber User Story
+
+1.
+User Story:
+As a common user,
+I want to get a ride as soon as possible,
+so that I could arrive the destination soon.
+
+Acceptance criteria:
+Given that there were many drivers around the user,
+the system would assign the task to nearest driver.
+
+2.
+User Story:
+As a common user,
+I want to know the estimated price the ride cost me,
+so that I can compare with other services.
+
+Acceptance criteria:
+Given the destination,
+the system could give the user estimated price by history records or GPS information.
+
+3.
+User Story:
+As a disabled user,
+I want the driver to help me get up and down the car.
+
+Acceptance criteria:
+Given that there were a field of notes in our system,
+the system should remind the driver to help the user. 
