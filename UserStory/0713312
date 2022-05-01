@@ -1,0 +1,15 @@
+0713312
+
+1.
+User Story
+    As a TSMC engineer, time is money, I want to take Uber to the company every weekday at the same time, without using Uber’s app to make the order.
+
+Acceptance Criteria
+	The system will automatically appoint a driver to the user’s house every day if the user has signed a contract with Uber.
+
+2.
+User Story
+	As a common user, I want to check if the driver has already taken three vaccine doses.
+
+Acceptance Criteria
+	The system supplies a bottom to let drivers change the numbers of doses they have taken.
