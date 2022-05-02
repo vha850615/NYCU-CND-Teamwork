@@ -1,3 +1,22 @@
-310551169
+4/27雲原生作業
+Github ID: vha850615
+Student ID: 310551169
 
-create a branch
+User Story:
+    身為一個旅行家，使用 uber 時，希望能找到司機兼在地嚮導，可以帶我去附近的好多個景點，一站一站的觀光，而不必每到一站，都要重新找一位新司機。
+    
+Acceptance criteria:
+    Given: User 開啟 app 叫車
+    When: User 設定想去的"多個"地點
+    Then: 系統會將 User 的需求單丟到司機的系統，讓司機們選擇是否接單
+    
+    Given: User 開啟 app 叫車
+    When: User 設定想旅遊的時間區間
+    Then: 系統會評估時間區間的合理性
+    Then: 若評估時間區間的合理，系統會將 User 的需求單丟到司機的系統，讓司機們選擇是否接單
+    
+    Given: User 完成設定
+    When: User 正式送出訂單前
+    Then: 系統回傳預計金額
+    Then: User 同意估價後，再正式送出訂單
+  
