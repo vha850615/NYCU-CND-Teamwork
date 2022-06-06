@@ -9,7 +9,8 @@ COPY ./package.json /app/
 WORKDIR /app/
 
 RUN npm install
+RUN docker-compose up -d
 
 EXPOSE 3030
 
-CMD ["node", "src"]
+CMD ["node", "src", "npm test"]
