@@ -22,12 +22,13 @@ module.exports = {
   },
   // measureService/index.js
   measure: {
-    types: ['SHARON', 'RIB_EYE'],
+    types: ['SHARON', 'RIB_EYE', 'FILET'],
   },
   // strategyUtil.js, strategyUtil.test.js
   strategy: {
     defaultStrategyTemp: 100,
     sharonStrategyPeriod: 20,
+    filetStrategyPeriod: 30,
     fakeThickness: 2.0,
     fakeMoisture: 0.65,
     fakeTFactor: 0.5,
