@@ -28,6 +28,7 @@ module.exports = {
   strategy: {
     defaultStrategyTemp: 100,
     sharonStrategyPeriod: 20,
+    filetStrategyPeriod: 30,
     fakeThickness: 2.0,
     fakeMoisture: 0.65,
     fakeTFactor: 0.5,
