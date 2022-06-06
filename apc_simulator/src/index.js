@@ -1,7 +1,7 @@
 const dotenv = require('dotenv');
 dotenv.config();
 
-const { nats } = require('config');
+const { nats, globalCache } = require('config');
 
 const NodeCache = require('node-cache');
 
@@ -45,8 +45,8 @@ const initGlobalNATSClient = async () => {
 const initGlobalCache = async () => {
   global.cache = new NodeCache();
 
-  global.cache.set('FACTOR_THICKNESS', 0.5);
-  global.cache.set('FACTOR_MOISTURE', 0.5);
+  global.cache.set('FACTOR_THICKNESS', globalCache.TFactor);
+  global.cache.set('FACTOR_MOISTURE', globalCache.MFactor);
 };
 
 const run = async () => {

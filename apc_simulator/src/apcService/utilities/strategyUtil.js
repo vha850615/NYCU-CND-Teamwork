@@ -1,9 +1,11 @@
+const strategy = require('config');
+
 const defaultStrategy = (moisture, mFactor) => {
   const period = (moisture * mFactor).toFixed(2);
 
   return {
     period,
-    temperature: 100,
+    temperature: strategy.defaultStrategyTemp,
   };
 };
 
@@ -11,7 +13,7 @@ const sharonStrategy = (thickness, tFactor) => {
   const temperature = (thickness * tFactor).toFixed(2);
 
   return {
-    period: 20,
+    period: strategy.sharonStrategyPeriod,
     temperature,
   };
 };

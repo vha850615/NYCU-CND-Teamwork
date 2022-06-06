@@ -1,16 +1,17 @@
 const { sharonStrategy, defaultStrategy } = require('../strategyUtil');
+const strategy = require('config');
 
 describe('Module strategyUtil', () => {
-  const fakeThickness = 2.0;
-  const fakeMoisture = 0.65;
-  const fakeTFactor = 0.5;
-  const fakeMFactor = 0.5;
+  const fakeThickness = strategy.fakeThickness;
+  const fakeMoisture = strategy.fakeMoisture;
+  const fakeTFactor = strategy.fakeTFactor;
+  const fakeMFactor = strategy.fakeMFactor;
 
   it('Method sharonStrategy', () => {
     const res = sharonStrategy(fakeThickness, fakeTFactor);
 
     expect(res).toStrictEqual({
-      period: 20,
+      period: strategy.sharonStrategyPeriod,
       temperature: (fakeThickness * fakeTFactor).toFixed(2),
     });
   });
@@ -20,7 +21,7 @@ describe('Module strategyUtil', () => {
 
     expect(res).toStrictEqual({
       period: (fakeMoisture * fakeMFactor).toFixed(2),
-      temperature: 100,
+      temperature: strategy.defaultStrategyTemp,
     });
   });
 });
