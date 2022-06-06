@@ -24,4 +24,13 @@ describe('Module strategyUtil', () => {
       temperature: strategy.defaultStrategyTemp,
     });
   });
+
+  it('Method filetStrategy', () => {
+    const res = filetStrategy(fakeThickness, fakeTFactor);
+
+    expect(res).toStrictEqual({
+      period: strategy.filetStrategyPeriod,
+      temperature: (fakeThickness * fakeTFactor + 20).toFixed(2),
+    });
+  });
 });

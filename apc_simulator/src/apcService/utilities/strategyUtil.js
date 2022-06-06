@@ -19,11 +19,10 @@ const sharonStrategy = (thickness, tFactor) => {
 };
 
 const filetStrategy = (thickness, tFactor) => {
-  const period = 30;
   const temperature = (thickness * tFactor + 20).toFixed(2);
   
   return {
-    period,
+    period: strategy.filetStrategyPeriod,
     temperature,
   };
 };
