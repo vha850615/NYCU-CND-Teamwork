@@ -1,8 +1,9 @@
 const { natsMessageHandler } = require('../messageUtil');
+const message = require('config');
 
 describe('Module messageUtil', () => {
   const fakeType = 'FACTOR_THICKNESS';
-  const fakeFactor = 0.5;
+  const fakeFactor = message.fakeFactor;
 
   beforeEach(() => {
     jest.clearAllMocks();
