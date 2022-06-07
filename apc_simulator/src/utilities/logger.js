@@ -42,7 +42,8 @@ const func = (loggerLabel) => {
     return handle;
   };
 
-  logger.end = (handle, metadata = {}, message = 'complete the process') => {
+  localeTimeStamp = new Date().toLocaleString();
+  logger.end = (handle, metadata = {}, message = 'time stamp | ' + localeTimeStamp + ' | complete the process') => {
     const cacheData = getDelHandleData(handle);
     if (!cacheData) return;
 
@@ -51,7 +52,8 @@ const func = (loggerLabel) => {
     logger.info(message, { _duration: duration, ...cacheData.metadata, ...metadata });
   };
 
-  logger.fail = (handle, metadata = {}, message = 'the process is faulted') => {
+  localeTimeStamp = new Date().toLocaleString();
+  logger.fail = (handle, metadata = {}, message = 'time stamp | ' + localeTimeStamp + ' the process is faulted') => {
     const cacheData = getDelHandleData(handle);
     if (!cacheData) return;
 
