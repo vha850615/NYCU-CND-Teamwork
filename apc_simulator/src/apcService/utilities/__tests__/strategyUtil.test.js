@@ -1,4 +1,4 @@
-const { sharonStrategy, defaultStrategy } = require('../strategyUtil');
+const { sharonStrategy, defaultStrategy, filetStrategy } = require('../strategyUtil');
 const strategy = require('config');
 
 describe('Module strategyUtil', () => {
